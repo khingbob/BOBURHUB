@@ -1,0 +1,313 @@
+#header {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  top: 0;
+  width: 100%;
+  height: var(--headerHeight);
+  background-color: var(--primaryBackground);
+  z-index: 100;
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  border-bottom: 1px solid var(--secondaryBackground);
+  user-select: none;
+  -webkit-user-select: none;
+  box-shadow: var(--headerShadow, 0 0 4px 2px black);
+  opacity: 1;
+  transition: background-color var(--second), border-bottom var(--second),
+    box-shadow var(--second), opacity var(--redirect);
+}
+
+#header > div {
+  height: 100%;
+}
+#header img {
+  -moz-user-drag: none; /* Firefox */
+  -webkit-user-drag: none; /* Chrome, Safari, and Opera */
+}
+.tabs:hover {
+  background-color: var(--tabsHover);
+}
+.dropdownMenu {
+  background-color: var(--primaryCompliment);
+  backdrop-filter: blur(35px);
+  -webkit-backdrop-filter: blur(35px);
+  top: 100%;
+  transition: background-color var(--first);
+}
+#brandName {
+  height: 100%;
+  width: 20%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--brandName);
+  cursor: pointer;
+  transition: color var(--second), left 0.4s ease-in-out;
+}
+#brandHub {
+  color: var(--brandHub);
+  background-color: var(--brandHubBackground);
+  border-radius: 5px;
+  padding: 1px 6px 0px 5px;
+  box-shadow: var(--brandHubShadow, 0px 0px 8px -2px var(--brandHubBackground));
+  transition: color var(--second), background-color var(--second),
+    box-shadow var(--second);
+}
+#searchResult {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+}
+#search {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 40%;
+  height: 100%;
+  background-color: var(--secondaryBackground);
+  border-radius: 10px;
+  height: 60%;
+  color: var(--highContrastFont);
+}
+#search:hover {
+  background-color: var(--secondaryHover);
+}
+#searchIcon {
+  pointer-events: none;
+  aspect-ratio: 1/1;
+  height: calc(var(--headerHeight) / 3);
+  stroke: var(--lowContrastFont);
+  z-index: 1;
+  padding: 0 calc((var(--headerHeight) / 10)) 0 calc((var(--headerHeight) / 5));
+  transition: stroke var(--second);
+}
+#searchInput {
+  background-color: transparent;
+  height: 100%;
+  width: 100%;
+  color: var(--highContrastFont);
+  padding-right: 10px;
+  transition: color var(--second);
+}
+#searchInput::placeholder {
+  color: var(--lowContrastFont);
+  transition: color var(--second);
+}
+
+#result {
+  z-index: 100;
+  height: 0;
+  min-width: 150px;
+  border-radius: 0 0 10px 10px;
+  position: fixed;
+  top: var(--headerHeight);
+  opacity: 1;
+  transition: opacity var(--redirect);
+}
+#rightHeader {
+  height: 100%;
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: absolute;
+  transition: right 0.4s ease-in-out;
+}
+#notificationDiv {
+  height: 100%;
+  aspect-ratio: 1/1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+#notification {
+  display: flex;
+  height: 55%;
+  width: 55%;
+}
+#notificationIcon {
+  stroke: none;
+  fill: var(--headerIcons);
+  transition: fill var(--second);
+}
+#profile {
+  height: 100%;
+  aspect-ratio: 1.5/1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+#profilePic {
+  height: 90%;
+}
+#profileLetter {
+  height: 90%;
+  font-size: calc(var(--headerHeight) / 2.5);
+}
+
+#arrowDown {
+  height: 30%;
+  stroke: var(--headerIcons);
+  aspect-ratio: 1/1;
+}
+#arrow {
+  fill: var(--headerIcons);
+  transition: fill var(--first);
+}
+#profileSettings {
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  top: var(--headerHeight);
+  width: 10vw;
+  min-width: 300px;
+  height: 0px;
+  border-radius: 0 0 10px 10px;
+  color: var(--lowContrastFont);
+  overflow-y: hidden;
+  opacity: 1;
+  transition: height 0.4s ease-in-out, background-color var(--first),
+    opacity var(--redirect);
+}
+
+.profileSettingsOpen {
+  height: 230px !important;
+}
+#profilePicSettings {
+  height: 50px;
+  width: 50px;
+  background-color: var(--primaryBackground);
+  color: var(--highContrastFont);
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+#accountSettings {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  gap: 15px;
+  box-sizing: border-box;
+  padding: 10px;
+  width: 90%;
+  background-color: var(--secondaryBackground);
+  border-radius: 10px;
+  margin-top: 10px;
+  box-shadow: 0px 7px 20px -15px black;
+  transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+#accountSettings:hover {
+  box-shadow: 0px 7px 20px -10px black;
+}
+.secondaryHover {
+  background-color: var(--secondaryHover) !important;
+}
+.secondaryBackground {
+  background-color: var(--secondaryBackground) !important;
+}
+#userName {
+  font-size: 14px;
+  color: var(--highContrastFont);
+  transition: color var(--first);
+}
+#userMail {
+  font-size: 13px;
+  transition: color var(--first);
+}
+#shareProfile {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  color: var(--shareProfile, var(--hubStyleFont));
+  width: 110px;
+  fill: var(--shareProfile, var(--hubStyleFont));
+  transition: color 0.2s ease-in-out, fill 0.2s ease-in-out;
+}
+#shareProfile:hover {
+  color: var(--shareProfileHover, var(--brandHubBackground));
+  fill: var(--shareProfileHover, var(--brandHubBackground));
+}
+#shareIcon {
+  height: 25px;
+}
+
+#arrowRight {
+  width: 15px;
+  transform: rotate(-90deg);
+}
+#otherSettings {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  font-size: 14px;
+  color: var(--highContrastFont);
+  transition: color var(--first);
+}
+.otherSetting {
+  display: flex;
+  justify-content: center;
+}
+.otherSetting:hover {
+  background-color: var(--secondaryHover);
+}
+.iconSetting {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  height: 40px;
+  width: 90%;
+  box-sizing: border-box;
+  padding-left: 10px;
+  cursor: pointer;
+}
+.iconSetting svg {
+  fill: var(--profileIcons, var(--hubStyleFont));
+  height: 15px;
+  width: 15px;
+  transition: fill var(--first);
+}
+#sun {
+  height: 20px;
+  width: 20px;
+  margin-left: -5px;
+}
+#logOutIcon {
+  stroke: var(--profileIcons, var(--hubStyleFont));
+  fill: none;
+  height: 20px;
+  width: 20px;
+  transition: stroke var(--first);
+}
+@media (max-width: 500px) {
+  #arrowDown {
+    display: none;
+  }
+  #profile {
+    aspect-ratio: 1;
+  }
+  #searchShort {
+    width: 100%;
+  }
+}
+/*vertical*/
+@media (max-aspect-ratio: 1.5) {
+  #header > div {
+    position: static;
+  }
+  #header {
+    justify-content: space-around;
+  }
+  #searchResult {
+    padding: 0 25px;
+  }
+}

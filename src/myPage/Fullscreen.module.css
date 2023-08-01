@@ -1,0 +1,91 @@
+#fullscreen {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.786);
+  backdrop-filter: blur(15px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1vw;
+  opacity: 0;
+}
+#userData {
+  position: absolute;
+  top: max(1vw, 1vh);
+  left: max(1vw, 1vh);
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  font-size: max(min(3vw, 3vh), 16px);
+  opacity: 0;
+  border-radius: 100px;
+  padding-right: 20px;
+}
+#fullscreen svg {
+  stroke: white;
+  width: max(min(5vw, 5vh), 30px);
+  cursor: pointer;
+}
+#profile {
+  height: max(min(10vw, 10vh), 40px);
+}
+
+.first {
+  transition: opacity 0.2s ease-in-out;
+}
+.second {
+  transition: opacity 0.2s 0.2s ease-in-out;
+}
+#box {
+  width: 80%;
+  height: auto;
+  background-color: black;
+  border-radius: 10px;
+  opacity: 0;
+  object-fit: contain;
+}
+.svgDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 6vw;
+  position: absolute;
+}
+#leftSvgDiv {
+  left: 0;
+}
+#rightSvgDiv {
+  right: 0;
+}
+/*horizontal*/
+@media (min-aspect-ratio: 1) {
+  #box {
+    height: 90%;
+    width: auto;
+  }
+}
+#right,
+#left {
+  opacity: 0;
+}
+
+.noCursor {
+  cursor: default !important;
+  position: absolute;
+}
+#x {
+  position: absolute;
+  top: max(1vw, 1vh);
+  right: max(1vw, 1vh);
+}
+#trash {
+  stroke: transparent;
+  stroke-width: 0;
+  fill: white;
+  position: absolute;
+  bottom: max(1vw, 1vh);
+  right: max(1vw, 1vh);
+}

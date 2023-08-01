@@ -1,0 +1,28 @@
+#coming {
+  width: 100%;
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  color: var(--highContrastFont);
+  transition: opacity var(--redirect), color var(--third);
+}
+#text {
+  font-size: min(7vw, 5vh);
+  display: flex;
+  gap: max(1vw, 10px);
+  align-items: center;
+}
+#soon {
+  box-sizing: border-box;
+  color: var(--brandHub);
+  background-color: var(--brandHubBackground);
+  border-radius: 10px;
+  padding: min(0.6vh, 1vw) min(1.6vh, 2vw);
+  box-shadow: var(--brandHubShadow, 0px 0px 8px -2px var(--brandHubBackground));
+  transition: color var(--second), background-color var(--second),
+    box-shadow var(--second);
+  display: flex;
+  justify-content: center;
+}

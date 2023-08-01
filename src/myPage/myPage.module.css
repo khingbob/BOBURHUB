@@ -1,0 +1,128 @@
+#myPage {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: opacity var(--redirect);
+}
+#header {
+  display: flex;
+  justify-content: center;
+  width: 60%;
+  gap: max(min(5vw, 5vh), 10px);
+  margin-bottom: 10vh;
+}
+#headerRight {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 70%;
+  color: var(--highContrastFont);
+  transition: color var(--third);
+}
+#profilePicDiv {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25%;
+}
+#profilePic {
+  width: 100%;
+  font-size: max(min(10vh, 10vw), 25px);
+}
+#profileLoad {
+  width: 100%;
+  display: none;
+}
+#camera {
+  fill: var(--highContrastFont);
+  position: absolute;
+  bottom: min(max(-2vh, -2vw), -10px);
+  height: 30%;
+  right: 0;
+  transition: fill var(--third);
+}
+#nickName {
+  font-size: max(min(5vh, 5vw), 20px);
+}
+#stats {
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+}
+#stats > div {
+  display: flex;
+  font-size: max(min(2.5vh, 2.5vw), 16px);
+}
+#stats span:first-child {
+  margin-right: 5px;
+}
+@media (max-aspect-ratio: 1.5) {
+  #headerRight {
+    gap: 10px;
+  }
+  #stats > div {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+#posts {
+  width: 60%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1vw 1.2%;
+  margin-bottom: 15vh;
+}
+#addPost {
+  background-color: var(--addStory, var(--primaryCompliment));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: background-color var(--third);
+}
+#plus {
+  stroke: var(--plus);
+  width: 50%;
+  position: absolute;
+  transition: stroke var(--third);
+}
+#plusLoader {
+  position: absolute;
+  width: 30%;
+  aspect-ratio: 1;
+  display: none;
+}
+.input {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+.post {
+  width: 32.5%;
+  aspect-ratio: 1/1.5;
+  object-fit: cover;
+  cursor: pointer;
+  transition: opacity 0.2s ease-in-out;
+}
+.notPlus {
+}
+
+#loader {
+  margin-left: 10vw;
+  aspect-ratio: 1;
+  height: max(min(10vh, 10vw), 50px);
+}
+@media (max-aspect-ratio: 1.5) {
+  #header {
+    width: 100%;
+  }
+  #posts {
+    width: 97%;
+  }
+}

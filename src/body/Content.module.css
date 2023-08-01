@@ -1,0 +1,132 @@
+#content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  opacity: 1;
+  transition: opacity var(--redirect);
+}
+#loading {
+  height: max(min(8vw, 8vh), 20px);
+  margin-bottom: 50vh;
+}
+.postContainer {
+  width: 100%;
+}
+.post {
+  border-radius: 20px;
+  background: var(--primaryCompliment);
+  width: 100%;
+  height: auto;
+  margin-bottom: max(8vh, 70px);
+  transition: background-color var(--third);
+}
+.crown {
+  position: absolute;
+  height: 4vh;
+  transform: scaleX(-1);
+  bottom: 3.8vh;
+  left: 1.4vh;
+}
+
+.postProfile {
+  position: relative;
+  box-sizing: border-box;
+  height: 6vh;
+  display: flex;
+  align-items: center;
+  padding: 0 max(min(1vw, 1vh), 10px);
+  gap: max(min(1vw, 1vh) * 1.5, 15px);
+  font-weight: 500;
+  font-size: max(min(2vw, 2vh), 16px);
+}
+.postProfilePic {
+  height: 80%;
+  color: var(--highContrastFont);
+}
+.userName {
+  color: var(--brandHubBackground);
+  transition: color var(--fourth);
+}
+.postContentContainer {
+  height: 84%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.postContent {
+  width: 100%;
+  object-fit: contain;
+  z-index: 5;
+}
+
+.postActions {
+  box-sizing: border-box;
+  position: relative;
+  height: 6vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  font-size: max(min(2vw, 2vh), 13px);
+  color: var(--lowContrastFont);
+  transition: color 0.4s var(--third);
+}
+
+/*horizontal*/
+@media (min-aspect-ratio: 0.7) {
+  .postContentContainer {
+    height: auto;
+    width: min(55vw, 55vh);
+  }
+  .post {
+    width: auto;
+  }
+  .postProfile,
+  .postActions {
+    height: min(6vw, 6vh);
+  }
+  .crown {
+    height: calc(min(6vw, 6vh) * 0.67);
+    bottom: calc(min(6vw, 6vh) * 0.63);
+    left: calc(min(6vw, 6vh) * 0.23);
+  }
+}
+
+.likes {
+  position: relative;
+  left: 5%;
+  height: 60%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.likesImage {
+  height: 70%;
+  aspect-ratio: 1;
+  stroke: var(--lowContrastFont);
+  cursor: pointer;
+  transition: stroke var(--third), fill var(--third);
+}
+.liked {
+  stroke: var(--brandHubBackground);
+  fill: var(--brandHubBackground);
+}
+.filledHeart {
+  fill: var(--lowContrastFont);
+  transition: fill var(--third);
+}
+.views {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 50%;
+  position: absolute;
+  right: 5%;
+}
+.eye {
+  height: 100%;
+  aspect-ratio: 1;
+  fill: var(--lowContrastFont);
+  transition: fill var(--third);
+}

@@ -1,0 +1,310 @@
+body {
+  background-color: rgb(20, 20, 20);
+  color: white !important;
+  font-family: "Roboto", sans-serif !important;
+  margin: 0 !important;
+  width: 100% !important;
+}
+* {
+  user-select: none;
+}
+#userNameStatus {
+  margin-top: 10px;
+}
+#passStatus {
+  margin-top: 10px;
+  color: #ffda00;
+}
+.passBad {
+  color: #ff4444 !important;
+}
+.userGood {
+  color: #ffda00;
+}
+.userBad {
+  color: #ff4444;
+}
+#root {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4vh;
+  background-color: rgb(20, 20, 20);
+}
+#header {
+  font-weight: 300;
+  height: 10%;
+  font-size: calc(min(2vw, 1vh) * 4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#brand {
+  font-size: calc(min(2vw, 1vh) * 3.5);
+  font-weight: 500;
+}
+#hub {
+  color: Black;
+  background-color: #ffda00;
+  border-radius: 5px;
+  padding: 1px 6px 0px 5px;
+  box-shadow: 0px 0px 8px -2px #ffda00;
+}
+
+#login {
+  box-sizing: border-box;
+  width: 80%;
+  height: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  background: #222222;
+  border-radius: 15px;
+  box-shadow: 0px 2px 23px -5px black;
+}
+#left {
+  box-sizing: border-box;
+  border-radius: 15px 0 0 15px;
+  padding: calc(min(1vh, 1vw) * 5);
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: calc(min(1vh, 1vw) * 3);
+  background-color: #2c2c2ce8;
+  position: relative;
+  z-index: 10;
+}
+#logoId {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+#leftLogo {
+  font-size: max(calc(min(1vw, 1vh) * 2), 20px);
+}
+#id {
+  background-color: #ffda00;
+  padding: 1px 6px 0px 5px;
+  box-shadow: 0px 0px 8px -2px #ffda00;
+  border-radius: 5px;
+  color: black;
+  font-weight: 500;
+  height: 10%;
+}
+#boburId {
+  font-size: max(calc(min(1vw, 1vh) * 3), 17px);
+}
+#leftDetails {
+  display: flex;
+  flex-direction: column;
+  color: #b2b2b2;
+  stroke: #b2b2b2;
+  height: 100%;
+}
+.details {
+  height: 20%;
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+  font-size: max(calc(min(1vw, 1vh) * 2), 16px);
+}
+.detailsIcons {
+  height: 30%;
+  aspect-ratio: 1;
+}
+#right {
+  box-sizing: border-box;
+  border-radius: 0 15px 15px 0;
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: calc(min(1vh, 1vw) * 3);
+  padding: 0 5%;
+}
+form {
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.formEl {
+  height: 30%;
+  width: 100%;
+}
+#bh {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#bh > span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+  aspect-ratio: 1;
+  background-color: #ffda00;
+  color: black;
+  padding: 5px;
+  font-size: max(calc(min(1vh, 0.7vw) * 5), 22px);
+  font-weight: 500;
+  border-radius: 10px;
+  box-shadow: 0px 0px 8px -2px #ffda00;
+}
+label {
+  font-size: max(calc(min(1vh, 1vw) * 3), 16px);
+}
+.input {
+  box-sizing: border-box;
+  height: 30%;
+  border-radius: 10px;
+  background-color: #2c2c2ce8;
+  outline: 1px solid #737373;
+  border: 0;
+  margin-top: 10px;
+  width: 100%;
+}
+.input:hover {
+  outline: 1px solid #8e8d8d;
+}
+
+.input:focus {
+  outline: 1px solid #737373;
+}
+input {
+  padding: 5px 10px;
+  color: white;
+  font-size: max(calc(min(1vw, 1vh) * 2.5), 16px);
+}
+#name {
+}
+#error {
+  width: 100%;
+  color: red;
+  text-align: center;
+}
+
+#password {
+  border-radius: 10px;
+  background-color: #2c2c2ce8;
+  border: 0;
+  color: white;
+  font-size: max(calc(min(1vw, 1vh) * 2.5), 16px);
+  display: flex;
+  position: relative;
+}
+#pass {
+  box-sizing: border-box;
+  background-color: transparent;
+  border: none;
+  height: 100%;
+  width: 90%;
+}
+#eyeDiv {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  position: absolute;
+  right: 5%;
+  top: 0;
+}
+#eye {
+  height: 50%;
+  stroke: #737373;
+  cursor: pointer;
+  box-sizing: border-box;
+  padding: 2%;
+}
+::-ms-reveal {
+  display: none;
+}
+#submitDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+#submit {
+  border-radius: 15px;
+  background-color: #ffda00;
+  color: black;
+  border: none;
+  box-shadow: 0px 0px 6px -2px #ffda00, inset 0 0 0 0 #ffda00;
+  width: 100%;
+  transition: box-shadow 0.2s ease-in-out;
+}
+#submit:hover {
+  box-shadow: 0px 0px 10px -2px #ffda00, inset 0 0 0 0 #ffda00;
+  cursor: pointer;
+}
+.noLogin:hover {
+  box-shadow: 0px 0px 6px -2px #ffda00, inset 0px 0px 21px 6px red !important;
+  cursor: default !important;
+}
+#orLogIn {
+  color: #b2b2b2;
+  width: 100%;
+  text-align: center;
+}
+#orLogIn > span {
+  cursor: pointer;
+}
+
+@media (max-width: 1000px) {
+  #root {
+    gap: 0;
+  }
+  #login {
+    height: 80vh;
+    width: 90vw;
+  }
+  #left {
+    height: 30%;
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+    position: relative;
+    flex-direction: row;
+  }
+  #logoId {
+    width: 40%;
+    gap: 20px;
+  }
+  #leftDetails {
+    width: 60%;
+    height: 100%;
+    justify-content: space-between;
+  }
+  .detailsIcons {
+    height: 100%;
+  }
+  .details {
+    height: 30%;
+    gap: 10px;
+  }
+  #lock {
+    height: 70%;
+    padding-left: 0.5vh;
+  }
+  #right {
+    height: 70%;
+    width: 100%;
+    border-radius: 0 0 15px 15px;
+    position: relative;
+  }
+  .formEl {
+    width: 60%;
+  }
+  #submit {
+    width: 100%;
+  }
+  #bh > span {
+    padding: 0;
+  }
+  #pass {
+    width: 85%;
+  }
+}
