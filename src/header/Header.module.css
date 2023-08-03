@@ -300,7 +300,7 @@
   }
 }
 /*vertical*/
-@media (max-aspect-ratio: 1.5) {
+@media (max-width: 700px) {
   #header > div {
     position: static;
   }
